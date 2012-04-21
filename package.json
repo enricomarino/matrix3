@@ -1,0 +1,21 @@
+{
+  "author": {
+    "name": "Enrico Marino",
+    "email": "enrico.marino@email.com",
+    "site": "http://onirame.no.de"
+  },
+  "name": "matrix3",
+  "description": "JavaScript math library for 3d matrix",
+  "version": "0.0.0",
+  "homepage": "https://github.com/onirame/matrix3",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/onirame/matrix3.git"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
