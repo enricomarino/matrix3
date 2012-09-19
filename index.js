@@ -148,5 +148,24 @@
 
     return self;
   };
+
+  /**
+   * set_row
+   * Set the i-th row of the matrix.
+   * 
+   * @param {Float32Array} self matrix
+   * @param {Number} i index of row
+   * @param {Number} values values to set 
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix2.set_row = function (self, i, values) {
+    self[i    ] = values[0];
+    self[i + 3] = values[1];
+    self[i + 6] = values[2];
+
+    return self;
+  };
   
  }(this));
