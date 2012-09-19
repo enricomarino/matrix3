@@ -235,4 +235,53 @@
     return values;
   };
 
+  /**
+   * get_col
+   * Get the j-th col of the matrix.
+   * 
+   * @param {Float32Array} self matrix
+   * @param {Number} j index of row
+   * @param {Number} values values to set 
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix3.get_col = function (self, j, values) {
+    if (vector === undefined) {
+      vector = new Float32Array([0.0, 0.0]);
+    }
+    
+    vector[0] = self[j + 0];
+    vector[1] = self[j + 2];
+
+    return vector;
+  };
+
+  /**
+   * sum
+   * Get the sum of matrix a and b.
+   * 
+   * @param {Float32Array} self matrix
+   * @param {Float32Array} a matrix
+   * @param {Float32Array} b matrix
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix3.sum = function (self, a, b) {
+    self[0] = a[0] + b[0];
+    self[1] = a[1] + b[1];
+    self[2] = a[2] + b[2];
+
+    self[3] = a[3] + b[3];
+    self[4] = a[4] + b[4];
+    self[5] = a[5] + b[5];
+
+    self[6] = a[6] + b[6];
+    self[7] = a[7] + b[7];
+    self[8] = a[8] + b[8];
+
+    return self;
+  };
+  
  }(this));
