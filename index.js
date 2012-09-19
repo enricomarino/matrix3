@@ -125,7 +125,7 @@
    * @api public
    */
 
-  matrix2.set = function (self, i, value) {
+  matrix3.set = function (self, i, value) {
     self[i] = value;
 
     return self;
@@ -143,7 +143,7 @@
    * @api public
    */
 
-  matrix2.set_value = function (self, i, j, value) {
+  matrix3.set_value = function (self, i, j, value) {
     self[i + 3*j] = value;
 
     return self;
@@ -160,12 +160,31 @@
    * @api public
    */
 
-  matrix2.set_row = function (self, i, values) {
+  matrix3.set_row = function (self, i, values) {
     self[i    ] = values[0];
     self[i + 3] = values[1];
     self[i + 6] = values[2];
 
     return self;
   };
-  
+
+  /**
+   * set_col
+   * Set the j-th col of the matrix.
+   * 
+   * @param {Float32Array} self matrix
+   * @param {Number} j index of col
+   * @param {Number} values values to set 
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix3.set_col = function (self, j, values) {
+    self[    3*j] = values[0];
+    self[1 + 3*j] = values[1];
+    self[2 + 3*j] = values[2];
+
+    return self;
+  };
+
  }(this));
