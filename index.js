@@ -113,5 +113,22 @@
 
     return self;
   };
-  
+
+  /**
+   * set
+   * Set the i-th value of the matrix.
+   * 
+   * @param {Float32Array} self matrix
+   * @param {Number} i index (from 0 to 8)
+   * @param {Number} value the i-th value of the matrix 
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix2.set = function (self, i, value) {
+    self[i] = value;
+
+    return self;
+  };
+
  }(this));
