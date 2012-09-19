@@ -38,4 +38,24 @@
     return new Float32Array(values);
   };
 
+  /**
+   * copy
+   * Copy matrix.
+   * 
+   * @param {Float32Array} self destination matrix
+   * @param {Float32Array} m source matrix
+   * @return {Float32Array} destination matrix
+   * @api public
+   */
+
+  matrix3.copy = function (self, m) {
+    self[0] = m[0];
+    self[1] = m[1];
+
+    self[2] = m[2];
+    self[3] = m[3];
+
+    return self;
+  };
+
  }(this));
