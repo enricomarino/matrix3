@@ -187,4 +187,18 @@
     return self;
   };
 
+  /**
+   * get
+   * Get the i-th value of the matrix.
+   * 
+   * @param {Float32Array} self matrix
+   * @param {Number} i index (from 0 to 8)
+   * @return {Number} the i-th value of the matrix 
+   * @api public
+   */
+
+  matrix3.get = function (self, i) {
+    return self[i];
+  };
+
  }(this));
