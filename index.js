@@ -201,4 +201,19 @@
     return self[i];
   };
 
+  /**
+   * get_value
+   * Get the value at the i-th row, j-th col of the matrix.
+   * 
+   * @param {Float32Array} self matrix
+   * @param {Number} row index of row
+   * @param {Number} col index of col
+   * @return {Number} the value of the matrix 
+   * @api public
+   */
+
+  matrix2.get_value = function (self, i, j) {
+    return self[i + 2*j];
+  };
+  
  }(this));
