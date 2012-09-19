@@ -387,5 +387,80 @@
 
     return self;
   };
+
+  /**
+   * sub
+   * Subtract matrix.
+   * 
+   * @param {Float32Array} self destination matrix
+   * @param {Float32Array} m matrix to add
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix3.sub = function (self, m) {
+    self[0] -= m[0];
+    self[1] -= m[1];
+    self[2] -= m[2];
+
+    self[3] -= m[3];
+    self[4] -= m[4];
+    self[5] -= m[5];
+
+    self[6] -= m[6];
+    self[7] -= m[7];
+    self[8] -= m[8];
+
+    return self;
+  };
+
+  /**
+   * mul
+   * Multiply matrix.
+   * 
+   * @param {Float32Array} self destination matrix
+   * @param {Float32Array} m matrix to add
+   * @return {Float32Array} matrix
+   * @api public
+   */
   
+  matrix3.mul = function (self, m) {
+    var a00 = self[0];
+    var a10 = self[1];
+    var a20 = self[2];
+
+    var a01 = self[3];
+    var a11 = self[4];
+    var a21 = self[5];
+
+    var a02 = self[6];
+    var a12 = self[7];
+    var a22 = self[8];
+
+    var b00 = m[0];
+    var b10 = m[1];
+    var b20 = m[2];
+
+    var b01 = m[3];
+    var b11 = m[4];
+    var b21 = m[5];
+
+    var b02 = m[6];
+    var b12 = m[7];
+    var b22 = m[8];
+
+    self[0] = a00 * b00 + a01 * b10 + a02 * b20;
+    self[1] = a10 * b00 + a11 * b10 + a12 * b20;
+    self[2] = a20 * b00 + a21 * b10 + a22 * b20;
+
+    self[3] = a00 * b01 + a01 * b11 + a02 * b21;
+    self[4] = a10 * b01 + a11 * b11 + a12 * b21;
+    self[5] = a20 * b01 + a21 * b11 + a22 * b21;
+
+    self[6] = a00 * b02 + a01 * b12 + a02 * b22;
+    self[7] = a10 * b02 + a11 * b12 + a12 * b22;
+    self[8] = a20 * b02 + a21 * b12 + a22 * b22;
+
+    return self;
+  };
 }(this));
