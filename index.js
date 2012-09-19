@@ -64,4 +64,29 @@
     return self;
   };
 
+  /**
+   * zero
+   * Set matrix to zero.
+   * 
+   * @param {Float32Array} self destination matrix
+   * @return {Float32Array} destination matrix
+   * @api public
+   */
+
+  matrix3.zero = function (self) {
+    self[0] = 0.0;
+    self[1] = 0.0;
+    self[2] = 0.0;
+
+    self[3] = 0.0;
+    self[4] = 0.0;
+    self[5] = 0.0;
+
+    self[6] = 0.0;
+    self[7] = 0.0;
+    self[8] = 0.0;
+
+    return self;
+  };
+
  }(this));
