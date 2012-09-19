@@ -131,4 +131,22 @@
     return self;
   };
 
+  /**
+   * set_value
+   * Set the value at i-th row, j-th col of the matrix.
+   * 
+   * @param {Float32Array} self matrix
+   * @param {Number} i index of row
+   * @param {Number} j index of col
+   * @param {Number} value value to set 
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix2.set_value = function (self, i, j, value) {
+    self[i + 3*j] = value;
+
+    return self;
+  };
+  
  }(this));
