@@ -321,7 +321,7 @@
    * @return {Float32Array} matrix
    * @api public
    */
-  
+
   mat3.prod = function (self, a, b) {
     var a00 = a[0];
     var a10 = a[1];
@@ -362,4 +362,30 @@
     return self;
   };
 
+  /**
+   * add
+   * Add matrix.
+   * 
+   * @param {Float32Array} self destination matrix
+   * @param {Float32Array} m matrix to add
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix3.add = function (self, m) {
+    self[0] += m[0];
+    self[1] += m[1];
+    self[2] += m[2];
+
+    self[3] += m[3];
+    self[4] += m[4];
+    self[5] += m[5];
+
+    self[6] += m[6];
+    self[7] += m[7];
+    self[8] += m[8];
+
+    return self;
+  };
+  
 }(this));
