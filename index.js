@@ -310,5 +310,56 @@
 
     return self;
   };
+
+  /**
+   * prod
+   * Get the product of matrix a and b.
+   * 
+   * @param {Float32Array} self matrix
+   * @param {Float32Array} a matrix
+   * @param {Float32Array} b matrix
+   * @return {Float32Array} matrix
+   * @api public
+   */
   
- }(this));
+  mat3.prod = function (self, a, b) {
+    var a00 = a[0];
+    var a10 = a[1];
+    var a20 = a[2];
+
+    var a01 = a[3];
+    var a11 = a[4];
+    var a21 = a[5];
+
+    var a02 = a[6];
+    var a12 = a[7];
+    var a22 = a[8];
+
+    var b00 = b[0];
+    var b10 = b[1];
+    var b20 = b[2];
+
+    var b01 = b[3];
+    var b11 = b[4];
+    var b21 = b[5]
+
+    var b02 = b[6];
+    var b12 = b[7];
+    var b22 = b[8];
+
+    self[0] = a00 * b00 + a01 * b10 + a02 * b20;
+    self[1] = a10 * b00 + a11 * b10 + a12 * b20;
+    self[2] = a20 * b00 + a21 * b10 + a22 * b20;
+
+    self[3] = a00 * b01 + a01 * b11 + a02 * b21;
+    self[4] = a10 * b01 + a11 * b11 + a12 * b21;
+    self[5] = a20 * b01 + a21 * b11 + a22 * b21;
+
+    self[6] = a00 * b02 + a01 * b12 + a02 * b22;
+    self[7] = a10 * b02 + a11 * b12 + a12 * b22;
+    self[8] = a20 * b02 + a21 * b12 + a22 * b22;
+
+    return self;
+  };
+
+}(this));
