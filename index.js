@@ -51,9 +51,15 @@
   matrix3.copy = function (self, m) {
     self[0] = m[0];
     self[1] = m[1];
-
     self[2] = m[2];
+
     self[3] = m[3];
+    self[4] = m[4];
+    self[5] = m[5];
+
+    self[6] = m[6];
+    self[7] = m[7];
+    self[8] = m[8];
 
     return self;
   };
