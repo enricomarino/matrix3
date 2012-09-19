@@ -212,8 +212,27 @@
    * @api public
    */
 
-  matrix2.get_value = function (self, i, j) {
-    return self[i + 2*j];
+  matrix3.get_value = function (self, i, j) {
+    return self[i + 3*j];
   };
   
+  /**
+   * get_row
+   * Get the i-th row of the matrix.
+   * 
+   * @param {Float32Array} self matrix
+   * @param {Number} i index of row
+   * @param {Number} values values to set 
+   * @return {Float32Array} the i-th row of the matrix
+   * @api public
+   */
+
+  matrix3.get_row = function (self, i, values) {
+    values[0] = self[i];
+    values[1] = self[i + 3];
+    values[2] = self[i + 6];
+
+    return values;
+  };
+
  }(this));
