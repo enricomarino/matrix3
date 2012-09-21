@@ -17,7 +17,7 @@
    * Library version.
    */
 
-  matrix3.version = '0.0.0';
+  matrix3.version = '0.1.0';
 
   /**
    * create
@@ -690,6 +690,33 @@
     self[6] += self[3] * y;
     self[7] += self[4] * y;
     
+    return self;
+  };
+
+  /**
+   * transpose
+   * Transpose.
+   * 
+   * @param {Float32Array} self destination matrix
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix3.transpose = function (self) {
+    var temp;
+
+    temp = self[1];
+    self[1] = self[3];
+    self[3] = temp;
+
+    temp = self[2];
+    self[2] = self[6];
+    self[6] = temp;
+
+    temp = self[5];
+    self[5] = self[7];
+    self[7] = temp;
+
     return self;
   };
 
