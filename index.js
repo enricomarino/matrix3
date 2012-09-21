@@ -655,6 +655,25 @@
   matrix3.translate = function (self, v) {
     self[6] += self[0] * v[0] + self[3] * v[1];
     self[7] += self[1] * v[0] + self[4] * v[1];
+
+    return self;
   };
-  
+
+  /**
+   * translate_x
+   * Translate matrix on x coordinate.
+   * 
+   * @param {Float32Array} self destination matrix
+   * @param {Array} value translation value
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix3.translate_x = function (self, value) {
+    self[6] += self[0] * value;
+    self[7] += self[1] * value;
+
+    return self;
+  };
+
 }(this));
