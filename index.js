@@ -493,5 +493,39 @@
     return self;
   };
 
+  /**
+   * rotate
+   * Rotate matrix.
+   * 
+   * @param {Float32Array} self destination matrix
+   * @param {Number} angle rotation angle
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix3.rotate = function (self, angle) {
+    var m00 = self[0];
+    var m10 = self[1];
+    var m20 = self[2];
+
+    var m01 = self[3];
+    var m11 = self[4];
+    var m21 = self[5];
+
+    var m02 = self[6];
+    var m12 = self[7];
+    var m22 = self[8];
+
+    self[0] = cos_a * m00 - sin_a * m10;
+    self[1] = sin_a * m00 + cos_a * m10;
+
+    self[3] = cos_a * m01 - sin_a * m11;
+    self[4] = sin_a * m01 + cos_a * m11;
+
+    self[6] = cos_a * m02 - sin_a * m12;
+    self[7] = sin_a * m02 + cos_a * m12;
+
+    return self;
+  }
   
 }(this));
