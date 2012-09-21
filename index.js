@@ -676,4 +676,21 @@
     return self;
   };
 
+  /**
+   * translate_y
+   * Translate matrix on x coordinate.
+   * 
+   * @param {Float32Array} self destination matrix
+   * @param {Array} value translation value
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix3.translate_y = function (self, y) {
+    self[6] += self[3] * y;
+    self[7] += self[4] * y;
+    
+    return self;
+  };
+
 }(this));
