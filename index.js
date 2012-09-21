@@ -423,7 +423,7 @@
    * @return {Float32Array} matrix
    * @api public
    */
-  
+
   matrix3.mul = function (self, m) {
     var a00 = self[0];
     var a10 = self[1];
@@ -463,4 +463,35 @@
 
     return self;
   };
+
+  /**
+   * rotation
+   * Get rotation matrix.
+   * 
+   * @param {Float32Array} self destination matrix
+   * @param {Number} angle rotation angle
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix3.rotation = function (self, angle) {
+    var cos_a = cos(angle);
+    var sin_a = sin(angle);
+
+    self[0] = cos_a;
+    self[1] = sin_a;
+    self[2] = 0.0;
+
+    self[3] = -sin_a;
+    self[4] = cos_a;
+    self[5] = 0.0;
+
+    self[6] = 0.0;
+    self[7] = 0.0;
+    self[8] = 1.0;
+
+    return self;
+  };
+
+  
 }(this));
