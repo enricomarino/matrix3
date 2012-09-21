@@ -563,7 +563,7 @@
    * @return {Float32Array} matrix
    * @api public
    */
-  
+
   matrix3.scale = function (self, v) {
     self[0] *= v[0];
     self[1] *= v[0];
@@ -579,4 +579,23 @@
 
     return self;
   };
+
+  /**
+   * scale_x
+   * Scale matrix on x coordinate.
+   * 
+   * @param {Float32Array} self destination matrix
+   * @param {Array} value scale factor
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix3.scale_x = function (self, value) {
+    self[0] *= value;
+    self[1] *= value;
+    self[2] *= value;
+
+    return self;
+  };
+
 }(this));
