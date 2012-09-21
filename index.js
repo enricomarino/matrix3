@@ -526,6 +526,32 @@
     self[7] = sin_a * m02 + cos_a * m12;
 
     return self;
-  }
+  };
+
+  /**
+   * rotation
+   * Get scaling matrix.
+   * 
+   * @param {Float32Array} self destination matrix
+   * @param {Array} v scale factors
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix3.scaling = function (self, v) {
+    self[0] = v[0];
+    self[1] = 0.0;
+    self[2] = 0.0;
+
+    self[3] = 0.0;
+    self[4] = v[1];
+    self[5] = 0.0;
+
+    self[6] = 0.0;
+    self[7] = 0.0;
+    self[8] = 1.0;
+
+    return self;
+  };
   
 }(this));
