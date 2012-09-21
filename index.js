@@ -598,4 +598,22 @@
     return self;
   };
 
+  /**
+   * scale_y
+   * Scale matrix on x coordinate.
+   * 
+   * @param {Float32Array} self destination matrix
+   * @param {Array} value scale factor
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix3.scale.y = function (self, value) {
+    self[3] *= value;
+    self[4] *= value;
+    self[5] *= value;
+
+    return self;
+  };
+
 }(this));
