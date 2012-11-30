@@ -1,16 +1,25 @@
 {
   "author": {
     "name": "Enrico Marino",
-    "email": "enrico.marino@email.com",
-    "site": "http://onirame.no.de"
+    "email": "enrico.marino@email.com"
   },
+  "maintainers": [
+    {
+      "name": "Enrico Marino",
+      "email": "enrico.marino@email.com"
+    },
+    {
+      "name": "Federico Spini",
+      "email": "federico.spini@gmail.com"
+    }
+  ],
   "name": "matrix3",
-  "description": "JavaScript math library for 3d matrix",
+  "description": "JavaScript 3d matrix library",
   "version": "0.1.0",
-  "homepage": "https://github.com/onirame/matrix3",
+  "homepage": "https://github.com/cvdlab/matrix3",
   "repository": {
     "type": "git",
-    "url": "git://github.com/onirame/matrix3.git"
+    "url": "git://github.com/cvdlab/matrix3.git"
   },
   "main": "index.js",
   "engines": {
