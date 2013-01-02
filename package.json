@@ -1,4 +1,7 @@
 {
+  "name": "matrix3",
+  "description": "JavaScript 3d matrix library",
+  "version": "0.1.1",
   "author": {
     "name": "Enrico Marino",
     "email": "enrico.marino@email.com"
@@ -13,9 +16,6 @@
       "email": "federico.spini@gmail.com"
     }
   ],
-  "name": "matrix3",
-  "description": "JavaScript 3d matrix library",
-  "version": "0.1.0",
   "homepage": "https://github.com/cvdlab/matrix3",
   "repository": {
     "type": "git",
