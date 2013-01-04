@@ -1,0 +1,14 @@
+{
+  "name": "matrix3",
+  "repo": "component-math/matrix3",
+  "version": "0.2.0",
+  "description": "JavaScript 3d matrix library",
+  "keywords": ["math", "matrix", "3d"],
+  "scripts": ["index.js"],
+  "dependencies": {
+  },
+  "development": {
+    "component/assert": "*"
+  },
+  "license": "MIT"
+}
