@@ -1,8 +1,9 @@
 /* !
  * matrix3
  * JavaScript 3d matrix library
- * Copyright (c) 2012 Enrico Marino
- * MIT License
+ *
+ * @copyright 2013 Enrico Marino (http://onirame.com)
+ * @license MIT
  */
 
 /**
@@ -15,7 +16,7 @@ var matrix3 = exports;
  * Library version.
  */
 
-matrix3.version = '0.1.1';
+matrix3.version = '0.2.0';
 
 /**
  * create
