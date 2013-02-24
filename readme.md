@@ -1,10 +1,10 @@
 # matrix3
 
-JavaScript 3d matrix library
+Matrix 3D component
 
 ## Installation
 
-    $ component install component-math/matrix3
+    $ component install enricomarino/matrix3
 
 ## License
 
