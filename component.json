@@ -1,8 +1,8 @@
 {
   "name": "matrix3",
-  "repo": "component-math/matrix3",
+  "repo": "enricomarino/matrix3",
   "version": "0.2.0",
-  "description": "JavaScript 3d matrix library",
+  "description": "Matrix 3D component",
   "keywords": ["math", "matrix", "3d"],
   "scripts": ["index.js"],
   "dependencies": {
