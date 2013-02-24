@@ -1,6 +1,6 @@
 {
   "name": "matrix3",
-  "description": "JavaScript 3d matrix library",
+  "description": "Matrix 3D component",
   "version": "0.2.0",
   "author": {
     "name": "Enrico Marino",
@@ -16,10 +16,10 @@
       "url": "http://federicospini.com"
     }
   ],
-  "homepage": "https://github.com/component-math/matrix3",
+  "homepage": "https://github.com/enricomarino/matrix3",
   "repository": {
     "type": "git",
-    "url": "git://github.com/component-math/matrix3.git"
+    "url": "git://github.com/enricomarino/matrix3.git"
   },
   "main": "index.js",
   "engines": {
